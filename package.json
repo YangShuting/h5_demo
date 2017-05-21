@@ -1,0 +1,22 @@
+{
+  "name": "webpack_sprite_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "ejs": "^2.5.6",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.15.3",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-spritesmith": "^0.3.3"
+  }
+}
