@@ -1,0 +1,213 @@
+/* 基于 iphone 6 plus*/
+/*基准值：1080/100 * 10 = 108px*/
+/* 1rem = 108px dpr=3*/
+/* width = 10rem*/
+
+/* 布局：转换 px 为 rem */
+
+@import 'sprite';
+
+
+@function px2rem($px, $base-font-size: 108px){
+	@if(unitless($px)){
+		@warn "Assuming # {$px} to be in pixels, attempting to convert it into pixels for you.";
+		@return px2rem($px + 0px);
+	}
+	@else if( unit($px) == rem ){
+		@return $px;
+	}
+	@return ( $px / $base-font-size ) * 1rem; 
+}
+
+/*字体的处理*/
+
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2 / 3;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3 / 3 ;
+    }
+}
+
+/* item style */
+@mixin itemStyle{
+	width: px2rem(328px);
+	height: px2rem(372px);
+	background-color: #ffffff;
+	border-radius: px2rem(15px);
+	.itemDescription{
+		color: #666666;
+		@include font-dpr(35px);
+	}
+
+}
+
+@mixin score_text{
+	margin: 0;
+	padding: 0;
+	div.title{
+		@include font-dpr(50px);
+		color: #d5eedb;
+		margin-top: px2rem(90px);
+	}
+	div.number{
+		@include font-dpr(100px);
+		color: #ffffff;
+		line-height: 0;
+		margin-top: px2rem(103px);
+		margin-bottom: px2rem(141px);
+	}	  
+}
+
+$margin : px2rem(10.5px);
+
+div.main{
+	text-align: center;
+	width: 100%;
+	.scoreCard{
+		width: 100%;
+		height: px2rem(577px);
+		div.score{
+			display: flex;
+			width: 100%;
+			height: px2rem(466px);
+			background-color: #F4F5F4;
+			.currentScore{
+				order: 1;
+				width: 33.3%;
+				height: 100%;
+				background-color: pink;
+				@include score_text;	
+			}
+
+			.animation{
+				order: 2;
+				width: 33.3%;
+				height:100%;
+				background-color: red;
+				
+			}
+
+			.nextScore{
+				order: 3;
+				width: 33.3%;
+				height:100%;
+				background-color: blue;
+				@include score_text;
+				
+			}
+		}
+		div.score_statement{
+			height: px2rem(111px);
+			width: 100%;
+			color: #d3f6ed;
+			background-color: #5CD3C7;
+			@include font-dpr(35px);
+			line-height: px2rem(111px);
+
+
+		}
+	}
+
+	div.container{
+		background-color: #F4F5F4;
+		width: 100%;
+		.itemWrapper{
+			width: 100%;
+			.container1{
+				display: flex;
+				padding-top: px2rem(25px);
+				.item_perInfo{
+					order: 0;
+					@include itemStyle;
+					margin-left: px2rem(29px);
+					margin-right: $margin;
+					position: relative;
+					.icon_person_info3{
+					@include sprite($icon-person_info3);
+					}
+
+					.otherInfo{
+						color: #ffffff;
+						@include font-dpr(30px);
+						border-radius: px2rem(15px);
+						background-color: #ed8a1e;
+						padding: px2rem(10px);
+						position: absolute;
+						top: px2rem(10px);
+						right: px2rem(10px);
+					}
+				}
+				.item_job{
+					order: 1;
+					@include itemStyle;
+					margin-left: $margin;
+					margin-right: $margin;
+					.icon_person_info3{
+					@include sprite($icon-person_info3);
+					}
+				}
+				.item_com_email{
+					order: 2;
+					margin-left: $margin;
+					@include itemStyle;
+					margin-right: px2rem(29px);
+					.icon_mail{
+						@include sprite($icon-mail);
+					}
+				}
+			}
+			.container2{
+				display: flex;
+				margin-top: px2rem(24px);
+				.item_fund{
+					order: 3;
+					@include itemStyle;
+					margin-left: px2rem(29px);
+					margin-right: $margin;
+					.icon_thrown{
+					@include sprite($icon-thrown);
+					}
+				}
+				.item_credit{
+					order: 4;
+					@include itemStyle;
+					margin-left: $margin;
+					margin-right: $margin;
+					.icon_money{
+					@include sprite($icon-money);
+					}
+				}
+				.item_edu{
+					order: 5;
+					@include itemStyle;
+					margin-left: $margin;
+					margin-right: px2rem(29px);
+					.icon_edu{
+					@include sprite($icon-edu);
+					
+					}
+				}
+				
+			}
+		}
+		.tips{
+			@include font-dpr(35px);
+
+			.icon_tips{
+					@include sprite($icon-tips);
+			}
+			.tips_head{
+				color: #ff8b17;
+			}
+			.tips_main{
+				color: #7a8a92;
+			}
+		}
+	}
+}
+

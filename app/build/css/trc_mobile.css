@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/* 基于 iphone 6 plus*/
+/*基准值：1080/100 * 10 = 108px*/
+/* 1rem = 108px dpr=3*/
+/* width = 10rem*/
+/* 布局：转换 px 为 rem */
+/*字体的处理*/
+/* item style */
+div.main {
+  text-align: center;
+  width: 100%; }
+  div.main .scoreCard {
+    width: 100%;
+    height: 5.34259rem; }
+    div.main .scoreCard div.score {
+      display: flex;
+      width: 100%;
+      height: 4.31481rem;
+      background-color: #F4F5F4; }
+      div.main .scoreCard div.score .currentScore {
+        order: 1;
+        width: 33.3%;
+        height: 100%;
+        background-color: pink;
+        margin: 0;
+        padding: 0; }
+        div.main .scoreCard div.score .currentScore div.title {
+          font-size: 50px;
+          color: #d5eedb;
+          margin-top: 0.83333rem; }
+          [data-dpr="2"] div.main .scoreCard div.score .currentScore div.title {
+            font-size: 33.33333px; }
+          [data-dpr="3"] div.main .scoreCard div.score .currentScore div.title {
+            font-size: 50px; }
+        div.main .scoreCard div.score .currentScore div.number {
+          font-size: 100px;
+          color: #ffffff;
+          line-height: 0;
+          margin-top: 0.9537rem;
+          margin-bottom: 1.30556rem; }
+          [data-dpr="2"] div.main .scoreCard div.score .currentScore div.number {
+            font-size: 66.66667px; }
+          [data-dpr="3"] div.main .scoreCard div.score .currentScore div.number {
+            font-size: 100px; }
+      div.main .scoreCard div.score .animation {
+        order: 2;
+        width: 33.3%;
+        height: 100%;
+        background-color: red; }
+      div.main .scoreCard div.score .nextScore {
+        order: 3;
+        width: 33.3%;
+        height: 100%;
+        background-color: blue;
+        margin: 0;
+        padding: 0; }
+        div.main .scoreCard div.score .nextScore div.title {
+          font-size: 50px;
+          color: #d5eedb;
+          margin-top: 0.83333rem; }
+          [data-dpr="2"] div.main .scoreCard div.score .nextScore div.title {
+            font-size: 33.33333px; }
+          [data-dpr="3"] div.main .scoreCard div.score .nextScore div.title {
+            font-size: 50px; }
+        div.main .scoreCard div.score .nextScore div.number {
+          font-size: 100px;
+          color: #ffffff;
+          line-height: 0;
+          margin-top: 0.9537rem;
+          margin-bottom: 1.30556rem; }
+          [data-dpr="2"] div.main .scoreCard div.score .nextScore div.number {
+            font-size: 66.66667px; }
+          [data-dpr="3"] div.main .scoreCard div.score .nextScore div.number {
+            font-size: 100px; }
+    div.main .scoreCard div.score_statement {
+      height: 1.02778rem;
+      width: 100%;
+      color: #d3f6ed;
+      background-color: #5CD3C7;
+      font-size: 35px;
+      line-height: 1.02778rem; }
+      [data-dpr="2"] div.main .scoreCard div.score_statement {
+        font-size: 23.33333px; }
+      [data-dpr="3"] div.main .scoreCard div.score_statement {
+        font-size: 35px; }
+  div.main div.container {
+    background-color: #F4F5F4;
+    width: 100%; }
+    div.main div.container .itemWrapper {
+      width: 100%; }
+      div.main div.container .itemWrapper .container1 {
+        display: flex;
+        padding-top: 0.23148rem; }
+        div.main div.container .itemWrapper .container1 .item_perInfo {
+          order: 0;
+          width: 3.03704rem;
+          height: 3.44444rem;
+          background-color: #ffffff;
+          border-radius: 0.13889rem;
+          margin-left: 0.26852rem;
+          margin-right: 0.09722rem;
+          position: relative; }
+          div.main div.container .itemWrapper .container1 .item_perInfo .itemDescription {
+            color: #666666;
+            font-size: 35px; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container1 .item_perInfo .itemDescription {
+              font-size: 23.33333px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container1 .item_perInfo .itemDescription {
+              font-size: 35px; }
+          div.main div.container .itemWrapper .container1 .item_perInfo .icon_person_info3 {
+            background-image: url(../images/sprite.png);
+            background-position: 0px -88px;
+            width: 74px;
+            height: 84px; }
+          div.main div.container .itemWrapper .container1 .item_perInfo .otherInfo {
+            color: #ffffff;
+            font-size: 30px;
+            border-radius: 0.13889rem;
+            background-color: #ed8a1e;
+            padding: 0.09259rem;
+            position: absolute;
+            top: 0.09259rem;
+            right: 0.09259rem; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container1 .item_perInfo .otherInfo {
+              font-size: 20px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container1 .item_perInfo .otherInfo {
+              font-size: 30px; }
+        div.main div.container .itemWrapper .container1 .item_job {
+          order: 1;
+          width: 3.03704rem;
+          height: 3.44444rem;
+          background-color: #ffffff;
+          border-radius: 0.13889rem;
+          margin-left: 0.09722rem;
+          margin-right: 0.09722rem; }
+          div.main div.container .itemWrapper .container1 .item_job .itemDescription {
+            color: #666666;
+            font-size: 35px; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container1 .item_job .itemDescription {
+              font-size: 23.33333px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container1 .item_job .itemDescription {
+              font-size: 35px; }
+          div.main div.container .itemWrapper .container1 .item_job .icon_person_info3 {
+            background-image: url(../images/sprite.png);
+            background-position: 0px -88px;
+            width: 74px;
+            height: 84px; }
+        div.main div.container .itemWrapper .container1 .item_com_email {
+          order: 2;
+          margin-left: 0.09722rem;
+          width: 3.03704rem;
+          height: 3.44444rem;
+          background-color: #ffffff;
+          border-radius: 0.13889rem;
+          margin-right: 0.26852rem; }
+          div.main div.container .itemWrapper .container1 .item_com_email .itemDescription {
+            color: #666666;
+            font-size: 35px; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container1 .item_com_email .itemDescription {
+              font-size: 23.33333px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container1 .item_com_email .itemDescription {
+              font-size: 35px; }
+          div.main div.container .itemWrapper .container1 .item_com_email .icon_mail {
+            background-image: url(../images/sprite.png);
+            background-position: 0px -34px;
+            width: 90px;
+            height: 54px; }
+      div.main div.container .itemWrapper .container2 {
+        display: flex;
+        margin-top: 0.22222rem; }
+        div.main div.container .itemWrapper .container2 .item_fund {
+          order: 3;
+          width: 3.03704rem;
+          height: 3.44444rem;
+          background-color: #ffffff;
+          border-radius: 0.13889rem;
+          margin-left: 0.26852rem;
+          margin-right: 0.09722rem; }
+          div.main div.container .itemWrapper .container2 .item_fund .itemDescription {
+            color: #666666;
+            font-size: 35px; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container2 .item_fund .itemDescription {
+              font-size: 23.33333px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container2 .item_fund .itemDescription {
+              font-size: 35px; }
+          div.main div.container .itemWrapper .container2 .item_fund .icon_thrown {
+            background-image: url(../images/sprite.png);
+            background-position: 0px -259px;
+            width: 97px;
+            height: 99px; }
+        div.main div.container .itemWrapper .container2 .item_credit {
+          order: 4;
+          width: 3.03704rem;
+          height: 3.44444rem;
+          background-color: #ffffff;
+          border-radius: 0.13889rem;
+          margin-left: 0.09722rem;
+          margin-right: 0.09722rem; }
+          div.main div.container .itemWrapper .container2 .item_credit .itemDescription {
+            color: #666666;
+            font-size: 35px; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container2 .item_credit .itemDescription {
+              font-size: 23.33333px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container2 .item_credit .itemDescription {
+              font-size: 35px; }
+          div.main div.container .itemWrapper .container2 .item_credit .icon_money {
+            background-image: url(../images/sprite.png);
+            background-position: 0px -358px;
+            width: 102px;
+            height: 102px; }
+        div.main div.container .itemWrapper .container2 .item_edu {
+          order: 5;
+          width: 3.03704rem;
+          height: 3.44444rem;
+          background-color: #ffffff;
+          border-radius: 0.13889rem;
+          margin-left: 0.09722rem;
+          margin-right: 0.26852rem; }
+          div.main div.container .itemWrapper .container2 .item_edu .itemDescription {
+            color: #666666;
+            font-size: 35px; }
+            [data-dpr="2"] div.main div.container .itemWrapper .container2 .item_edu .itemDescription {
+              font-size: 23.33333px; }
+            [data-dpr="3"] div.main div.container .itemWrapper .container2 .item_edu .itemDescription {
+              font-size: 35px; }
+          div.main div.container .itemWrapper .container2 .item_edu .icon_edu {
+            background-image: url(../images/sprite.png);
+            background-position: 0px -172px;
+            width: 118px;
+            height: 87px; }
+    div.main div.container .tips {
+      font-size: 35px; }
+      [data-dpr="2"] div.main div.container .tips {
+        font-size: 23.33333px; }
+      [data-dpr="3"] div.main div.container .tips {
+        font-size: 35px; }
+      div.main div.container .tips .icon_tips {
+        background-image: url(../images/sprite.png);
+        background-position: 0px 0px;
+        width: 41px;
+        height: 34px; }
+      div.main div.container .tips .tips_head {
+        color: #ff8b17; }
+      div.main div.container .tips .tips_main {
+        color: #7a8a92; }
+
+/*# sourceMappingURL=trc_mobile.css.map */
